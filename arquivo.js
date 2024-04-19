@@ -68,7 +68,54 @@ console.log(marcos.sddress.street)
 /*É possível trocar um item interno do objeto, como abaixo.*/ 
 
 marcos.sddress.number = 360
-console.log(marcos)
+console.log(marcos) 
+
+
+/* 2.6. Null & Undefined(NULO e INDEFINIDO): É  a ausencia de alguma informação. O "Null", quando de proposito é deixado alguma informação vazia, ou nula. Podendo acrescentar posteriormente a informação. */ 
+
+let manga = {
+  name: "Marcus",
+  age: 30,
+  sddress: null
+}
+console.log(manga)
+manga.sddress = "Bela Vista"
+
+/*O "Undefined" é uma mensagem de erro quando não aparece alguma informação. Como abaixo.*/
+
+let fruta =  {
+  name: "Açaí",
+  cor: "roxo",
+}
+
+console.log(fruta.preço) /* Procurei por preço, porém não tem essa informação no let fruta.*/ 
+
+/* 3. ESTRUTURA DE DADOS: É possível organizar os dados em algumas estruturas.
+   3.1. Array(Uma "caixa" de VARIEDADE): O "Array" é umas estrutura de dados que serve para guardar varios dados em um lugar só. Para cria-lo tem que colocar entre [], separado por vírgulas. No "Arrey" começa a contar as posições dentro do cochete pelo zero. Sendo também possível alterar um item. Como abaixo. */ 
+
+const banana = [ 20, "Casa da avó", 490, 5]
+console.log(banana[1]) /*A posição 1 é "Casa da avó", pois a contagem começa do zero.*/
+
+banana[2] = "Minha casa" 
+console.log(banana)/*Fiz a alteração da posição: A posição 2 que era 490, passou a ser "Minha casa"*/
+
+/*É possivel colocar objetos dentro do "Arrey", podendo acessar um item específico e até altera-lo. Como abaixo que a idade do item 2 foi alterado.*/
+
+const uva = [
+  {name:"Maria", age: 25},
+  45,
+  {name:"Nonato", age: 35}
+]
+uva[2].age = 30
+console.log(uva) /* a idade do item 2 foi alterado.*/
+
+console.log(uva[0].name) /*o nome do item 0 foi acessado.*/
+
+
+
+
+
+
 
 
 
