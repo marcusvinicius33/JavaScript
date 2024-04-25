@@ -5,6 +5,7 @@
 
   Obs. O nome de uma variável deve ser escrito com letra minúscula. Mas quando tiver mais de um nome, não pode haver espaço entre em nomes, colocando os demais nomes juntos, iniciando com letra maiúscula.
   Também não é permitido iniciar uma variável com número. E uma variável não pode ter o mesmo nome, dentro de um mesmo código, independente ser for do tipo "let" ou "const".
+  A variável pode começar com letra, com "$" ou "_"; não podendo começar com número. É possivel usar letras, números, acentos e simbolos, não podendo conter espaço entre as palavras, e nem ser palavras reservadas pelo js para executar algum comando.
   */
 let abacate = "fruta"
 const numeroDeAlunos = "40"
