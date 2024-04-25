@@ -3,7 +3,7 @@
   const:Valor não pode ser usado novamente, sendo um valor constante.
   var: Código antigo, está descontinuado/não usar.
 
-  Obs. O nome de uma variável deve ser escrito com letra minúscula. Mas tiver mais de um nome, não pode haver espaço entre em nomes, colocando os demais nomes juntos, iniciando com letra maiúscula.
+  Obs. O nome de uma variável deve ser escrito com letra minúscula. Mas quando tiver mais de um nome, não pode haver espaço entre em nomes, colocando os demais nomes juntos, iniciando com letra maiúscula.
   Também não é permitido iniciar uma variável com número. E uma variável não pode ter o mesmo nome, dentro de um mesmo código, independente ser for do tipo "let" ou "const".
   */
 let abacate = "fruta"
