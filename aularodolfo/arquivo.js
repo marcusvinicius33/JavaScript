@@ -91,9 +91,9 @@ let fruta =  {
 console.log(fruta.preço) /* Procurei por preço, porém não tem essa informação no let fruta.*/ 
 
 /* 3. ESTRUTURA DE DADOS: É possível organizar os dados em algumas estruturas.
-   3.1. Array(Uma "caixa" de VARIEDADE): O "Array" é umas estrutura de dados que serve para guardar varios dados em um lugar só. Para cria-lo tem que colocar entre [], separado por vírgulas. No "Arrey" começa a contar as posições dentro do cochete pelo zero. Sendo também possível alterar um item. Como abaixo. */ 
+   3.1. Array(Uma "caixa" de VARIEDADE): O "Array" é umas estrutura de dados que serve para guardar varios dados em um lugar só. Para cria-lo tem que colocar entre cochetes [], separado por vírgulas. No "Arrey" começa a contar as posições dentro do cochete pelo zero. Sendo também possível alterar um item. Como abaixo. */ 
 
-const banana = [ 20, "Casa da avó", 490, 5]
+const banana = [ 20, "Casa da avó", 490, {name:"Maria", age: 25}, 5]
 console.log(banana[1]) /*A posição 1 é "Casa da avó", pois a contagem começa do zero.*/
 
 banana[2] = "Minha casa" 
@@ -110,6 +110,40 @@ uva[2].age = 30
 console.log(uva) /* a idade do item 2 foi alterado.*/
 
 console.log(uva[0].name) /*o nome do item 0 foi acessado.*/
+
+/* 4. CONTROLADOR DE FLUXO: É uma ferramenta usada dentro do código que decide como algo será feito ou não.
+   4.1 if (Uma condição: SE algo acontecer... faça isso.) SE a condição colocada for verdadeira ele vai executar uma parte de código, se não, ele executa o "else".
+   Estrutura do "if": if(A CONDIÇÃO){O QUE SERÁ EXECUTADO, SE O if FOR VERDADEIRO} Exemplo abaixo.
+
+   4.2 else (Uma condição: SE algo NÃO acontecer... faça aquilo.) O else é opcional. Estrutura do else:após um if coloca o else {}
+ */
+/*OBS. Operadores de comparação:
+> maior que...
+< menor que...
+== igual que...*/
+
+const notaDoAluno = 7
+const notaDeCorte = 5
+
+if(notaDoAluno > notaDeCorte){
+  console.log("Parabéns, você passou de ano.")
+} else { 
+  console.log("Você foi reprovado.")
+} /*Se o if for falso, ele executa isso.*/
+
+/* 5.0. FUNÇÕES (Function), é um trecho de código que é executado SOMENTE quando solicitado.
+*/
+
+function nomeNaTela() {
+  console.log("Marcus")
+}
+nomeNaTela()
+
+
+
+
+
+
 
 
 
