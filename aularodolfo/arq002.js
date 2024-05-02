@@ -47,7 +47,7 @@ function cliqueiNoBotao(){
     alert("Botão clicado com sucesso!")
 }
 
-/* Outro exemplo usando o evento "onkeypress" > Uma tecla é pressionada,  no "input" da "html", ligando a uma função na Js.*/
+/* Outro exemplo usando o evento "onkeypress" > Uma tecla é pressionada,  no "input" da "html", ligando a uma função no Js.*/
 
 const meuinput = document.querySelector("#main-input")
 
