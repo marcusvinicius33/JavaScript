@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+}
+body {
+    background-color: rgba(67, 221, 67, 0.828);
+}
+.img-logo {
+    width: 200px;
+    display: block; /*Com o display block, o elemento ocupa sozinho toda a linha.*/
+    margin: 20px auto; /*Usando um atalho na margem da imagem, assim o top(em cima) e o botton(em baixo) ficaram com 20px e o left (esquerda) e o right(direita) ficaram "auto" automático. Com isso, a imagem ficou centralizada, pois o "display" é "block".*/
+}
+main {
+    width: 375px;
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    margin: 0 auto 40px;
+    padding: 44px 24px 23px;
+}
+
+label {
+    color: #777777;
+    font-weight: 400;
+    font-size: 15px;
+}
+select, input {
+    background-color: #FFFFFF;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    height: 48px;
+    width: 100%;
+    margin-bottom: 24px;
+    appearance: none;
+    padding-left: 18px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #555555;
+
+}
+button {
+    background-color: #6217c4;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 48px;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+button:hover {
+    opacity: 0.8;
+}
+button:active {
+    opacity: 0.6;
+}
+section {
+    border: 1px solid #772FD3;
+    border-radius: 20px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.img-seta {
+    margin: 15px auto;
+}
+.box-real, .box-dolar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.pmoeda {
+    color: #777777;
+    font-size: 20px;
+}
+.pvalor-br, .pvalor-usa {
+    color: #555555;
+    font-size: 20px;
+    font-weight: 700;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Projeto Moedas</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <img src="./assets/logo.gif" alt="logo-devclub-convert-money" class="img-logo">
+
+    <main>
+        <label for="ireal">
+            Converter <b>de</b>
+            <select name="real" id="ireal">
+                <option value=""> R$ Real Brasileiro</option>
+            </select>
+        </label> 
+
+        <label for="iconverter">
+            Converter <b>para</b>
+            <select name="converter" id="iconverter">
+                <option value=""> US$ Dólar Americano</option>
+                <option value=""> € Euro</option>
+            </select>
+        </label> 
+
+        <label for="ivalor">
+            Valor:
+            <input type="number" id="ivalor" placeholder="R$ 10.000,00">
+        </label>
+
+        <button class="convert-button">Converter</button>
+
+        <section>
+            <div class="box-real">
+                <img src="./assets/real.png" alt="logo-moeda-real-brasil">
+                <p class="pmoeda">Real</p>
+                <p class="pvalor-br">R$ 0,00</p>
+            </div>
+
+            <img src="./assets/vector.png" alt="seta" class="img-seta">
+
+            <div class="box-dolar">
+                <img src="./assets/dolar.png" alt="logo-moeda-dólar-usa">
+                <p class="pmoeda">Dólar</p>
+                <p class="pvalor-usa">US$ 0,00</p>
+            </div>
+        </section>
+    </main>
+    
+</body>
+<script src="arq004.js"></script>
+</html>
