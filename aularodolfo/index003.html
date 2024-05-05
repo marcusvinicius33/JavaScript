@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,15 +17,21 @@
         <label for="ireal">
             Converter <b>de</b>
             <select name="real" id="ireal">
-                <option value=""> R$ Real Brasileiro</option>
+                <option value="real"> R$ Real Brasileiro</option>
+                <option value="dolar"> US$ Dólar Americano</option>
+                <option value="euro"> € Euro</option>
+                <option value="libra">£ Libra</option>
+                <option value="bitcoin">Bitcoin</option>
             </select>
         </label> 
 
         <label for="iconverter">
             Converter <b>para</b>
-            <select name="converter" id="iconverter">
-                <option value=""> US$ Dólar Americano</option>
-                <option value=""> € Euro</option>
+            <select name="converter" id="iconverter" class="select-converter">
+                <option value="dolar"> US$ Dólar Americano</option>
+                <option value="euro"> € Euro</option>
+                <option value="libra">£ Libra</option>
+                <option value="bitcoin">Bitcoin</option>
             </select>
         </label> 
 
@@ -46,8 +52,8 @@
             <img src="./assets/vector.png" alt="seta" class="img-seta">
 
             <div class="box-dolar">
-                <img src="./assets/dolar.png" alt="logo-moeda-dólar-usa">
-                <p class="pmoeda">Dólar</p>
+                <img class="moeda-imagem" src="./assets/dolar.png" alt="logo-moeda-dólar-usa">
+                <p class="pmoeda" id="imoeda-dolar">Dólar</p>
                 <p class="pvalor-usa">US$ 0,00</p>
             </div>
         </section>
