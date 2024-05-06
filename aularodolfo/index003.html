@@ -16,7 +16,7 @@
     <main>
         <label for="ireal">
             Converter <b>de</b>
-            <select name="real" id="ireal">
+            <select name="real" id="ireal" class="escolher-moeda">
                 <option value="real"> R$ Real Brasileiro</option>
                 <option value="dolar"> US$ Dólar Americano</option>
                 <option value="euro"> € Euro</option>
@@ -32,6 +32,7 @@
                 <option value="euro"> € Euro</option>
                 <option value="libra">£ Libra</option>
                 <option value="bitcoin">Bitcoin</option>
+                <option value="real"> R$ Real Brasileiro</option>
             </select>
         </label> 
 
@@ -44,8 +45,8 @@
 
         <section>
             <div class="box-real">
-                <img src="./assets/real.png" alt="logo-moeda-real-brasil">
-                <p class="pmoeda">Real</p>
+                <img class="image-moeda" src="./assets/real.png" alt="logo-moeda-real-brasil">
+                <p class="pmoeda" id="imoeda-real">Real</p>
                 <p class="pvalor-br">R$ 0,00</p>
             </div>
 
