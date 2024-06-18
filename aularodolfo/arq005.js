@@ -192,6 +192,25 @@ if(salary <= 3000){
 */
 salary <= 3000 ? console.log("O colaborador é Júnior.") : salary >= 3000 && salary < 10000 ? console.log("O colaborador é Senior.") : console.log("Ele é diretor.")
 
+/* 9.0. Switch Case: Controlador de Fluxo
+ */
+const temperatura = 30
+switch(temperatura){ //key
+    case 10: //Pode ser value de: user, number
+        console.log("Tá meio frio.") 
+        break;
+    case 20: 
+        console.log("Tá meio quente.") 
+        break;
+    case 30: //Pode ser value, user,number
+        console.log("Tá quente.") 
+        break;
+
+    default:
+        console.log("Não sei te dizer.")
+        break
+} 
+
 
 
 
