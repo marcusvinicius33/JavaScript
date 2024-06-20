@@ -6,4 +6,5 @@ prompt("Qual o seu nome")*/ //vai fazer uma pergunta.
 OBS. Um unico sinal de igual "=" para o JS vai ser lido como "recebe". */
 
 var nome = window.prompt("Qual o seu nome?")
-window.alert("É um grande prazer em te conhecer," + nome + '.') /*O '+' adiciona outros elementos a frase, no caso, foi adicionado o "nome" e o "."
+window.alert("É um grande prazer em te conhecer," + nome + '.') /*O '+' adiciona outros elementos a frase, no caso, foi adicionado o "nome" e o 
+"."
