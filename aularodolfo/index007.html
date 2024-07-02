@@ -3,10 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projeto for</title>
 </head>
 <body>
+    <input type="text" placeholder="Digite o nome do contato.">
+    <p></p>
+    <button onclick="search()">Procurar contato</button>
     
 </body>
-<script src="./arq008.js"></script>
+    <script>
+        let p = document.querySelector("p")
+        let input = document.querySelector("input")
+
+        const contacts = [
+            {name: "Marcus", number: "(91) 98865-9178"},
+            {name: "Maria", number: "(91) 98174-1280"},
+            {name: "Nonato", number: "(91) 98425-1335"},
+            {name: "Nathalie", number: "(91) 99124-2639"},
+            {name: "Matheus", number: "(91) 98856-9648"}
+        ]
+
+        function search() {
+            //console.log(input.value)
+            for (let i = 0; i < contacts.length ; i++) {
+                //console.log(contacts[i])
+                //Obs. o "toLowerCase" torna todas as letras minusculas.
+                if (input.value.toLowerCase() === contacts[i].name.toLowerCase()) {
+                    p.innerHTML = `Contato encontrado Nome: ${contacts[i].name} Tel: ${contacts[i].number}`
+
+                    break
+                    //Obs. o "break" é para parar de rodar o "for".
+                } else {
+                    p.innerHTML = "Contato não encontrado, tente novamente."
+                }
+                
+            }
+        }
+    </script>
+
+
 </html>
