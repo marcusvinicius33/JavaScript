@@ -27,5 +27,22 @@ console.log(user[3])*/
 /*users.length => Tamanho do meu Array*/
 for (let i  = 0; i < users.length; i++) {
     console.log(users[i])
+}
+
+/*
+11.2 FOR OF: Mais uma extrutura de repetição, ele itera(analisa cada item, seja letra, seja palavra...) item por item de um arrey, parando de iterar sozinho após analisar todos os itens, não necessitando uma condição.
+Extrutura de um For of:
+
+for (const iterator of object) {
     
+}
+*/
+const myName = "Rodolfo"
+const usuario = ["João", "Maria", "Letícia"]
+
+for (const letter of myName) {
+    console.log(letter)
+}
+for (const name of usuario) {
+    console.log(name)
 }
