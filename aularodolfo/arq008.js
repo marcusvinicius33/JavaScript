@@ -100,4 +100,35 @@ do {
     console.log(i)
 } while (i < 10);
 
-/*11.6 ForEach */
+/*11.6 ForEach: Fornece três informações (item (element), index, array). Serve para iterar array.
+Estrutura de um forEach:
+
+array.forEach(element => {
+    
+});
+
+*/
+
+const users3 = [
+    {name: "Rodolfo", age: 33, contact: "(91) 98425-3643"},
+    {name: "João", age: 18, contact: "(91) 98409-3478"},
+    {name: "Maria", age: 26, contact: "(91) 99123-2365"},
+    {name: "Ciara", age: 17, contact: "(91) 98268-5409"}
+]
+
+users3.forEach( (item, index, array) => {
+    console.log(item);
+    console.log(index);
+    console.log(array)
+});
+/*Obs: O item é obrigatório, mas tbm é possivel adicionar o index e o array.O index é a posição do array, e o array é o array completo.
+
+Outras formas de uso:
+*/ 
+users3.forEach( item => {
+    console.log(item.name)
+});
+
+users3.forEach( item => {
+    console.log(`Nome: ${item.name}, Idade: ${item.age}, Contato: ${item.contact}`)
+});

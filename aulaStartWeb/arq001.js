@@ -24,4 +24,43 @@ console.log(frase)
 const fraseNova = "Uma nova frase";
 console.log(fraseNova)
 
+/*4.0 TIPOS DE DADOS do Java Script.
+
+4.1 STRING: Conjunto de caracteres, geralmente um texto entre aspas, seja simple ou duplo. Ou seja, "um texto ou palavras entre aspas" e 'uma string'.
+Exemplo:
+*/
+let minhaString =  "Todo esse 'texto' entre aspas é uma string."
+// É possível 'concatenar', ou seja, juntas, somar, duas string. Da seguinte forma. Ex:
+const primeiraString = "O Marcus"
+const segundaString = "é um programador."
+
+console.log(primeiraString + " " + segundaString)
+/*Obs. A aspas dupla no exemplo significa mais uma string, no caso, um espaçamento, que será vista no resultado do console.log.
+
+Outra forma de concatenar é utilizando uma "template string" que é uma maneira mais otimizada de concatenar ou unir dados para formar uma expressão, com ele é possível misturar diferentes tipos (variáveis, textos, operadores etc) de forma mais eficiente e no final irá converter a expressão em uma string única.
+A Extrutura de uma Template String é entre parentese, uma crase, mais cifrão e cochetes:
+console.log(`texto ${}`)
+Exemplo:
+*/
+console.log(`Você sabia que o Marcus ${segundaString}`)
+
+/*4.2. NUMBER: O Número deve ser escrito sem aspas, se não ele será considerado uma string.
+Obs. é possivel concatenar os números com operações de soma (+), subtração (-), multiplicação (*), divisão (/).
+E com o "typeof" é possível saber qual é o tipo do dado, Exemplos abaixo:
+*/
+const meuNumero = 4
+const outroNumero = 8
+
+console.log(meuNumero * outroNumero)
+console.log(typeof outroNumero)
+
+/* 4.3. NULL: É um valor nulo.
+   4.4. UNDEFINED: O undefined é um valor indefinido, ele não existe.
+*/
+let semValor; 
+console.log(typeof semValor)
+
+  
+  
+
 
