@@ -1,0 +1,11 @@
+body {
+    background-image: url(./assets/bg-mobile.jpg); /* link da imagem*/
+    background-repeat: no-repeat; /*a imagem não repete*/
+    background-position: top center; /*a imagem está posicionada no top e no centro*/
+    background-size: cover; /* a opção cover cobre todo o espaço visível da tela.*/
+    /* Um atalho pra agrupar todos esses background em um só é o seguinte:
+
+    background: color image repeat position/size
+    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    */
+}
