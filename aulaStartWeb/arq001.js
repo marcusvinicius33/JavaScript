@@ -60,7 +60,31 @@ console.log(typeof outroNumero)
 let semValor; 
 console.log(typeof semValor)
 
-  
+//5.0. FUNÇÕES (Function), é um trecho ou bloco de código que é executado SOMENTE quando solicitado.Exemplo:
+
+function minhaFunction(mensagem, nome, number) {
+    console.log(mensagem, nome, number);
+}
+minhaFunction("Primeira Mensagem", "Marcus", 35)
+minhaFunction("Segunda Mensagem", "Ciara", 1)
+
+//A Função também tem uma opção de retorno como no Exemplo abaixo:
+function minhaFuncao2(meuNome) {
+    return meuNome
+}
+console.log(minhaFuncao2("Barbosa"))
+//ou
+function minhaFuncao(myName) {
+    return`${myName} é meu nome.`
+}
+console.log(minhaFuncao("Vinícius"));
+//Outro Exemplo:
+function feira(fruta, legume, valor) {
+    console.log(fruta, legume, valor);
+    
+}
+feira("Banana", "cebola", "45,00")
+
   
 
 
