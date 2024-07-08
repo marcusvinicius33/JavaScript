@@ -1,11 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: white;
+}
 body {
     background-image: url(./assets/bg-mobile.jpg); /* link da imagem*/
     background-repeat: no-repeat; /*a imagem não repete*/
     background-position: top center; /*a imagem está posicionada no top e no centro*/
     background-size: cover; /* a opção cover cobre todo o espaço visível da tela.*/
     /* Um atalho pra agrupar todos esses background em um só é o seguinte:
-
     background: color image repeat position/size
     background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
     */
+}
+#container {
+    width: 360px;/*largura*/
+    height: 712px;/*altura*/
+    margin: auto;
+    border: 2px solid rgb(0, 255, 102);
+    margin: 56px auto 56px auto;
+} /*Obs. O Display Block vai fazer com que o elemento ocupe toda a linha, forçando os outros elementes a ficarem em baixo, a div por padrão será um elemento Block, enquanto que uma imagem é por padrão um elemento Display inline, ou seja, que fica agrupado na mesma linha, com outros elementos, se tiver. logo em elementos inline, não é possivel colocar margin auto.*/
+#profile {
+    text-align: center;/*alinhei todos os elementos da div no centro. */
+    padding: 24px;
+}
+#profile img {
+    width: 112px;
+}
+#profile p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
 }
