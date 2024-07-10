@@ -18,10 +18,9 @@ body {
 #container {
     width: 360px;/*largura*/
     height: 712px;/*altura*/
-    margin: auto;
-    border: 2px solid rgb(0, 255, 102);
-    margin: 56px auto 56px auto;
-} /*Obs. O Display Block vai fazer com que o elemento ocupe toda a linha, forçando os outros elementes a ficarem em baixo, a div por padrão será um elemento Block, enquanto que uma imagem é por padrão um elemento Display inline, ou seja, que fica agrupado na mesma linha, com outros elementos, se tiver. logo em elementos inline, não é possivel colocar margin auto.*/
+    margin: 56px auto 0px;
+    padding: 0 24px;
+} /*Obs. O Display Block vai fazer com que o elemento ocupe toda a linha, forçando os outros elementes a ficarem em baixo, a div por padrão será um elemento Block, enquanto que uma imagem é por padrão um elemento Display inline, ou seja, que fica agrupado na mesma linha, com outros elementos, se tiver. logo em elementos inline, não é possivel colocar margin auto. o Display flex é mais flexivel, e se ajusta buscando deixar todos os elementos da caixa agrupados um ao lado do outro.*/
 #profile {
     text-align: center;/*alinhei todos os elementos da div no centro. */
     padding: 24px;
@@ -35,3 +34,38 @@ body {
     line-height: 24px;
     margin-top: 8px;
 }
+ul {
+    list-style: none; /*tira os pontinhos que estavam na lista*/
+    display: flex;
+    flex-direction: column; /*Coloca os elementos em coluna, um abaixo do outro.*/
+    gap: 16px; /*espaçamento entre os elementos*/
+    padding: 24px 0;
+}
+ul li a {
+    display: flex;
+    justify-content: center;/*centraliza os elementos Os itens são embalados, nivelados um com o outro em direção ao centro do recipiente de alinhamento ao longo do eixo principal. Se o elemento for display: block tambem poderia centralizar usando o text-align: center.*/
+    align-items: center; /*centraliza e alinha os elementos bem no centro da linha imaginária, ou seja, são centralizados ao longo da linha do eixo.*/
+    padding: 16px 24px;
+    background-color: rgba(255, 255, 255, 0.1);/*cor de fundo*/
+    border: 1px solid rgba(255, 255, 255, 0.5); /*borda*/
+    border-radius: 8px; /*arredondamento da borda.*/
+    backdrop-filter: blur(4px); /*A propriedade CSS backdrop-filter permite que você aplique efeitos gráficos como desfoque (o blur significa embaçado) ou mudança de cor à área atrás de um elemento. Como ela se aplica a tudo atrás do elemento, para ver o efeito você deve tornar o elemento ou seu fundo pelo menos parcialmente transparente.*/
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none; /*O text-decoration é a Decorações aplicadas à fonte usada no texto de um elemento. com a opção none retira toda a decoração, inclusive a tira a linha que ficava abaixo do link.*/
+    font-weight: 500;
+    transition: background 0.2s;
+}
+ul li a:hover {
+    background-color:  rgba(255, 255, 255, 0.5) ;
+    border:  1.5px solid white;
+}
+#social-link {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px 0;
+    font-size: 24px;  
+}
+
+
+
