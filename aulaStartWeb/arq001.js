@@ -83,7 +83,54 @@ function feira(fruta, legume, valor) {
     console.log(fruta, legume, valor);
     
 }
-feira("Banana", "cebola", "45,00")
+feira("Banana", "cebola", "45,00");
+
+/* 6.0 OBJETOS : É um conjunto de informações compostos por chaves {} e valor que são separados por vírgula, os valores podem ser Métodos (valores em forma de funções) ou propriedades (valores em outros formatos).
+Para acessar os valores dentro das chaves temos o 'dot notation', que basicamente é um ponto ".", seguido da chave que eu quero acessar.
+*/
+const marcus = {
+    completeName: "Marcus Vinícius Barbosa Ribeiro", //exemplo de chave e valor. Sendo o valor, uma propriedade.
+    idade: 35,
+    showMessege: function() {
+        alert("Mensagem")
+    }, // exemplo de função, dentro do objeto. Sendo o valor, um método.
+    estado: "Pará"
+}
+console.log(marcus.completeName); //acessando o valor propriedade dentro da chave.
+console.log(marcus.showMessege()); //acessando o valor método dentro da chave. nesse caso é preciso chamar (executar) a função.
+
+/* 7.0. ARRAY: É uma lista repleta de valores. Sendo uma lista unica, é chamada de vetor; sendo uma lista de outras lista, é chamada de matriz. O Array utiliza cochetes []. Cada item contido no array é contado do zero em diante.
+ */
+const arrayVetor = ["Marcus","Nathalie","Maria"];
+console.log(arrayVetor)
+
+const arrayMatriz = [
+    ["honda","toyota"],
+    ["Marcus", "Nonato"],
+    ["Programador", "Professor"]];
+console.log(arrayMatriz[2])
+
+// 8.0. Operadores Aritméticos:
+
+const numero1 = 6;
+const numero2 = 2;
+
+const adicao = numero1 + numero2
+const subtracao = numero1 - numero2
+const multiplicacao = numero1 * numero2
+const divisao = numero1 / numero2
+
+console.log(divisao)
+
+// Outros Operadores Aritméticos:
+
+const incremento = numero1++ //adiciona mais um número ao numero existente.
+const decremento = numero1-- //diminue um numero do numero existente.
+const modulo = 20 % 6 // Mostra o valor do "resto" da divisão.
+const exponencial = numero1 ** numero2 //Eleva o numero a potencia, no exemplo 6 * 6
+
+console.log(exponencial)
+
 
   
 

@@ -43,3 +43,46 @@ function soma(value, value2) {
 soma(20, 30)
 soma(15, 45)
 
+/*12.1 Existe dos tipos de funções:
+1. Function void (vazia): Quando chama uma função dentro de uma variavel ela não retorna nada. como no exemplo abaixo.
+function sub(value, value2) {
+    console.log(value - value2)
+}
+const result = sub(45, 15)
+console.log(result)
+
+2. Function return: rotorna o valor para quem chamou a função. Exemplo:
+*/
+function sum(value, value2) {
+    const result = value + value2
+    return result
+}
+const result = sum(45, 15)
+console.log(result)
+
+//Desafio:
+const cart = [10, 244, 99, 2, 20, 33, 250]
+let finalValue = 0
+
+function calcularDesconto(preco, desconto){
+      const result = (preco * desconto) / 100
+      return result
+}
+
+/*cart.forEach(value => {
+    //finalValue = finalValue + value (atalho abaixo)
+    finalValue += value
+});
+console.log(finalValue)*/
+
+cart.forEach((value) => {
+    if (value > 30) {
+        const desconto = calcularDesconto(value, 10)
+
+    finalValue = finalValue + (value - desconto)
+} else {
+    finalValue += value
+}
+})
+
+console.log(finalValue)
