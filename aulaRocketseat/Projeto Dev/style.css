@@ -5,6 +5,14 @@
     font-family: "Inter", sans-serif;
     color: var(--text-color);
 }
+@media (min-width: 700px){
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+    .light {
+        --bg-url:  url(./assets/bg-desktop-light.jpg);
+    }
+} /*tornei responsivo a imagem de fundo da tela, para a largura mínima de 700px, usando o "media queries".*/
 :root {
     --text-color: white;
     --bg-url: url(./assets/bg-mobile.jpg);
@@ -31,9 +39,11 @@ body {
     background: color image repeat position/size
     background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
     */
+    height: 100vh; /*ajustei a altura para o total disponível 100vh.*/
 }
 #container {
-    width: 360px;/*largura*/
+    width: 100%;/*largura 100% se adapta a todo o espaço.*/
+    max-width: 588px; /*largura máxima: limita a largura ao máximo desejado.*/
     height: 712px;/*altura*/
     margin: 56px auto 0px;
     padding: 0 24px;
@@ -69,11 +79,34 @@ body {
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+
+    animation: slide-back 0.3s;
 }
 .light #switch button {
-    right: 0;
-    left: initial;
+    /*right: 0;
+    left: initial; 
+    Nessa funçao o button deslizava, Abaixo uma forma mais animada de realizar isso.*/
+    animation: slide-in 0.3s forwards;
 }
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
+} /*cria uma sombra ao passar pelo button*/
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
+    }
+} /*keyframes: propriedade que define animações. Animation: propriedade que permitiu que o button se movesse de uma forma mais animada.*/
 #switch span {
     display: block;
     width: 64px;
@@ -131,7 +164,3 @@ footer {
     text-align: center;
     font-size: 14px;
 }
-
-
-
-
