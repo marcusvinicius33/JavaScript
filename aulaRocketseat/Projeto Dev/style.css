@@ -3,10 +3,27 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-    color: white;
+    color: var(--text-color);
+}
+:root {
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color:  rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color:  rgba(255, 255, 255, 0.2);
+    --switch-bg-url: url(./assets/moon-stars.svg); /*imagem do button*/
+}
+.light {
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color:  rgba(0, 0, 0, 0.5);
+    --surface-color:  rgba(0, 0, 0, 0.05);
+    --surface-color-hover:  rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);--switch-bg-url: url(./assets/sun.svg);
 }
 body {
-    background-image: url(./assets/bg-mobile.jpg); /* link da imagem*/
+    background-image: var(--bg-url); /* link da imagem*/
     background-repeat: no-repeat; /*a imagem não repete*/
     background-position: top center; /*a imagem está posicionada no top e no centro*/
     background-size: cover; /* a opção cover cobre todo o espaço visível da tela.*/
@@ -34,6 +51,39 @@ body {
     line-height: 24px;
     margin-top: 8px;
 }
+#switch {
+    position: relative;
+    width: 64px;
+
+    margin: 4px auto; 
+}
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center; /*nesse background está a cor, a imagem e suas configurações, não repetir e centralizar.*/
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute; /*a posição do button em cima do span*/
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
 ul {
     list-style: none; /*tira os pontinhos que estavam na lista*/
     display: flex;
@@ -46,8 +96,8 @@ ul li a {
     justify-content: center;/*centraliza os elementos Os itens são embalados, nivelados um com o outro em direção ao centro do recipiente de alinhamento ao longo do eixo principal. Se o elemento for display: block tambem poderia centralizar usando o text-align: center.*/
     align-items: center; /*centraliza e alinha os elementos bem no centro da linha imaginária, ou seja, são centralizados ao longo da linha do eixo.*/
     padding: 16px 24px;
-    background-color: rgba(255, 255, 255, 0.1);/*cor de fundo*/
-    border: 1px solid rgba(255, 255, 255, 0.5); /*borda*/
+    background-color: var(--surface-color);/*cor de fundo*/
+    border: 1px solid var(--stroke-color); /*borda*/
     border-radius: 8px; /*arredondamento da borda.*/
     backdrop-filter: blur(4px); /*A propriedade CSS backdrop-filter permite que você aplique efeitos gráficos como desfoque (o blur significa embaçado) ou mudança de cor à área atrás de um elemento. Como ela se aplica a tudo atrás do elemento, para ver o efeito você deve tornar o elemento ou seu fundo pelo menos parcialmente transparente.*/
     -webkit-backdrop-filter: blur(4px);
@@ -56,16 +106,32 @@ ul li a {
     transition: background 0.2s;
 }
 ul li a:hover {
-    background-color:  rgba(255, 255, 255, 0.5) ;
-    border:  1.5px solid white;
+    background-color: var(--surface-color-hover);
+    border:  1.5px solid var(--text-color);
 }
 #social-link {
     display: flex;
     justify-content: center;
-    gap: 32px;
     padding: 24px 0;
     font-size: 24px;  
 }
+#social-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+#social-link a:hover {
+    background: var(--highlight-color);
+}
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
 
 
 
