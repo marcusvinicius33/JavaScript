@@ -131,6 +131,34 @@ const exponencial = numero1 ** numero2 //Eleva o numero a potencia, no exemplo 6
 
 console.log(exponencial)
 
+/* 8.0. OPERADORES DE ATRIBUIÇÃO: Atribuem valor pra alguma coisa. Exemplos:*/
+let igual = "atribuição";//o sinal de igual é o operador de atribuição mais utilizado.
+
+let atribuicao = numero1 += numero2;//uma atribuição seguido de uma soma. Assim: numero1 = numero1 + numero2.
+let subtraçao = numero1 -= numero2;//uma atribuição seguido de uma subtração. Assim: numero1 = numero1 - numero2.
+let multiplicar = numero1 *= numero2;//uma atribuição seguido de uma multiplicação. Assim: numero1 = numero1 * numero2.
+
+/* 9.0 OPERADORES DE COMPARAÇÃO: compara dois valores e retorna dizendo se é verdadeiro ou falso. Exemplo:*/ 
+let numero3 = 6;
+let numero4 = 2;
+
+console.log(numero3 > numero4);//sinal de maior, fala: maior que...
+console.log(numero3 < numero4);//sinal de menor, fala: menor que...
+console.log(numero3 >= numero4);//sinal de maior e igual, fala: maior ou igual a...
+console.log(numero3 <= numero4);//sinal de menor e igual, fala: menor ou igual a...
+console.log(numero3 == numero4);//2 sinais de igualdade: estamos nesse caso verificando a igualdade dos valores. fala:  primeiro valor é igual ao segundo favor. Obs: 1 simbolo de igual é atribuição e 2 simbolos de igual é um operador de comparação.
+console.log(numero3 != numero4);//sinal de afirmação e igual, comparador de diferença. fala: primeiro valor é diferente do segundo favor....
+console.log(numero3 === numero4);//Comparador de identidade, leva em consideração os tipos de dados. se é número, ou string, ou outros...
+console.log(numero3 !== numero4);//Comparador de diferença da identidade, leva em consideração os tipos de dados. se é número, ou string, ou outros. vendo se são diferentes.
+
+/*10.0. OPERADOR TERNÁRIO: Funciona para tomada de decisões, sendo uma condicional. Ele dá uma resposta se o valor for verdadeiro ou falso, dependendo da condição. Exemplo: */
+ let numero5 = 10;
+
+ numero5 ? alert("Retorna true") : alert("Retorna false");//a condição nesse caso é o numero5 seguido do ponto de interrogação, que é como se eu tivesse perguntando qual é o valor dessa condição, se é true ou false. Ele sendo verdadeiro aparecerá o alert("Retorna true") não considerando o que vem depois dos dois pontos, se for falso ele retornará o ("Retorna false"), não considerando o que vinha antes dos dois pontos.
+ //Obs. Lembrando: Qualque número que não seja zero é verdadeiro "true", assim o zero é sempre falso, e tbm uma string vazia '' e falso, já uma string com espaço dentro ' ' é verdadeira.
+
+
+
 
   
 
