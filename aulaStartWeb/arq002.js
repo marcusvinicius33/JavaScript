@@ -53,3 +53,81 @@ if (idade3 > 29) {
 } else {
     console.log("Ele não tem idade mínima.")
 }
+
+/*11.4. O SWITCH CASE em JavaScript é uma estrutura de controle muito útil quando estamos trabalhando com uma variável que pode assumir diferentes valores possíveis e, a partir desses valores, executar diferentes blocos de código correspondentes.
+
+Como no nosso exemplo abaixo, a partir do valor da variável idade4, diferentes blocos de códigos são executados, retornando respostas diferentes sobre a idade da pessoa.
+
+Para obtermos um resultado, começaremos com a palavra chave switch(), onde, dentro dos parênteses, passaremos a variável que queremos manipular, que no nosso caso é a variável idade4.
+
+Em seguida, atribuiremos os casos (case) e as respostas, ou seja, os blocos de código que devem ser executados para cada variável.
+
+Nosso código ficará assim:
+*/
+const idade4 = 19;
+
+switch (idade4) {
+    case 20:
+        console.log("Ele tem 20 anos.");
+        break;
+    case 21:
+        console.log("Ele tem 21 anos.");
+        break;
+
+    default:
+        console.log("Ele não tem nenhuma das idade anteriores.");
+}
+/* IMPORTANTE: o switch case em JavaScript não termina automaticamente após encontrar uma correspondência, a menos que você inclua uma instrução break para cada caso. Sem essa instrução, ele continuará executando todos os outros blocos de código abaixo da correspondência encontrada.
+
+Além disso, no nosso código, não temos uma resposta padrão para quando a idade4 inserida não corresponder a nenhum dos casos. Se você voltar a analisar o código que tínhamos com if-else, verá que temos a resposta: "Ele não tem idade mínima.".
+
+Para incluirmos isso dentro da estrutura do switch case, precisamos adicionar a instrução default, que é uma condição padrão, um bloco de código que será executado caso nenhuma das outras opções seja correspondida. No caso do default, não precisamos da instrução break, pois não há mais blocos de código dentro do nosso switch.
+*/
+
+/* 12.0. ESTRUTURA DE REPETIÇÕES OU LOOPS: Os loops podem executar um bloco de código diversas vezes. Os loops são úteis se você quiser executar o mesmo código repetidamente, cada vez com um valor diferente.
+
+JavaScript suporta diferentes tipos de loops:
+
+  1. for- percorre um bloco de código várias vezes
+  2. for/in- percorre as propriedades de um objeto
+  3. for/of- percorre os valores de um objeto iterável
+  4. while- percorre um bloco de código enquanto uma condição especificada é verdadeira
+  5. do/while- também percorre um bloco de código enquanto uma condição especificada é verdadeira.
+
+12.1. O loop For: A for declaração cria um loop com 3 expressões opcionais:
+
+for (expression 1; expression 2; expression 3) {
+  // bloco de código a ser executado
+}
+A expressão 1 é executada (uma vez) antes da execução do bloco de código.
+A expressão 2 define a condição para execução do bloco de código.
+A expressão 3 é executada (toda vez) após o bloco de código ter sido executado.
+*/
+for (let numero = 0; numero < 5; numero++) {
+    console.log(`Repetição de número ${numero}.`) 
+}
+/*No exemplo acima, você pode ler:
+
+A expressão 1 define uma variável antes do início do loop (seja numero = 0).
+A expressão 2 define a condição para que o loop seja executado (numero deve ser menor que 5).
+A expressão 3 aumenta um valor (numero++) cada vez que o bloco de código no loop é executado.
+
+Expressão 1: Normalmente você usará a expressão 1 para inicializar a variável usada no loop (seja i = 0).
+Obs. Nem sempre é esse o caso. O JavaScript não se importa. A expressão 1 é opcional.
+obs2. Você pode iniciar muitos valores na expressão 1 (separados por vírgula), exemplo:
+
+for (let i = 0, len = cars.length, text = ""; i < len; i++) {
+  text += cars[i] + "<br>";
+}
+
+E você pode omitir a expressão 1 (como quando seus valores são definidos antes do loop começar), exemplo:
+
+let i = 2;
+let len = cars.length;
+let text = "";
+
+for (; i < len; i++) {
+  text += cars[i] + "<br>";
+}
+*/
+
