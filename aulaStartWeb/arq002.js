@@ -112,7 +112,7 @@ A expressão 1 define uma variável antes do início do loop (seja numero = 0).
 A expressão 2 define a condição para que o loop seja executado (numero deve ser menor que 5).
 A expressão 3 aumenta um valor (numero++) cada vez que o bloco de código no loop é executado.
 
-Expressão 1: Normalmente você usará a expressão 1 para inicializar a variável usada no loop (seja i = 0).
+12.1.1. Expressão 1: Normalmente você usará a expressão 1 para inicializar a variável usada no loop (seja i = 0).
 Obs. Nem sempre é esse o caso. O JavaScript não se importa. A expressão 1 é opcional.
 obs2. Você pode iniciar muitos valores na expressão 1 (separados por vírgula), exemplo:
 
@@ -130,4 +130,87 @@ for (; i < len; i++) {
   text += cars[i] + "<br>";
 }
 */
+let numero1 = 5
+for (; numero1 < 10; numero1++) {
+    console.log(`repetindo ${numero1}.`)
+}
+/*12.1.2. Expressão 2
+Frequentemente a expressão 2 é usada para avaliar a condição da variável inicial.
+Nem sempre é o caso. O JavaScript não se importa. A Expressão 2 também é opcional.
+Se a expressão 2 retornar true, o loop começará novamente. Se retornar false, o loop terminará.
+
+OBS. Se você omitir a expressão 2, você deve fornecer um break dentro do loop. Caso contrário, o loop nunca terminará. Isso travará seu navegador. 
+*/
+for (let numero2 = 10; /*numero2 < 25*/; numero2++) {
+    console.log(`Repetição de número ${numero2}.`) 
+    if (numero2 == 15){
+        break
+    }
+}
+/*12.1.3. Expressão 3
+Frequentemente a expressão 3 incrementa o valor da variável inicial.
+Nem sempre é esse o caso. O JavaScript não se importa. A expressão 3 é opcional.
+Obs. A expressão 3 pode fazer qualquer coisa, como incremento negativo (i--), incremento positivo (i = i + 15) ou qualquer outra coisa.
+A expressão 3 também pode ser omitida (como quando você incrementa seus valores dentro do loop).
+
+12.2. O loop For In: A instrução JavaScript for in percorre as propriedades de um objeto:
+Sintaxe
+for (key in object) {
+  // bloco de código a ser executado
+}
+ler: para (chave no objeto) {
+}.
+
+Exemplo:
+*/
+const objeto = {
+    name: "Marcus", idade: 35, cidade: "Vigia"
+};
+
+for (key in objeto) {
+    console.log(key)
+}//Nesse caso eu conheço o nome de cada objeto: name, idade, cidade.
+for (key in objeto) {
+    console.log(objeto[key])
+}//Nesse caso eu acesso o conteúdo de cada objeto: Marcus, 35, Vigia.
+
+/*12.3. O laço For Of: A instrução JavaScript for of percorre os valores de um objeto iterável. Ele permite que você faça um loop em estruturas de dados iteráveis, como matrizes, strings, mapas, arreys, listas de nós e muito mais:
+
+Sintaxe
+for (variable of iterable) {
+  // code block to be executed
+}
+variável(variable)- Para cada iteração o valor da próxima propriedade é atribuído à variável. A variável pode ser declarada com const, let, ou var.
+iterável(iterable) - Um objeto que possui propriedades iteráveis, com o array.
+
+12.3.1. Looping sobre um Array
+Exemplo:
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x;
+}
+*/
+const array = ["BMW", "Volvo", "Mini"]
+
+for (item of array) {
+    console.log(item)
+}
+/* 12.4. O Loop While: O while loop percorre um bloco de código enquanto uma condição especificada for verdadeira.
+
+Sintaxe
+while (condition) {
+  // bloco que será executado.
+  ++
+}
+*/
+let numero2 = 0;
+
+while (numero2 < 5) {
+    console.log(numero2);
+    numero2++
+}
+//Obs. Se você esquecer de aumentar a variável usada na condição, o loop nunca terminará. Isso travará seu navegador.
+
 
