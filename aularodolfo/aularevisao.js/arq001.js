@@ -53,6 +53,12 @@ if (notaDoAluno > notaDeCorte) {
     console.log("Infelizmente vc foi reprovado, estude mais!")
 }
 
+//FUNÇÕES:
+
+function nomeNaTela(){
+    console.log("Marcus")
+}
+nomeNaTela()
 
 
 

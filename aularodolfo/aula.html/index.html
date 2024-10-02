@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula-DevClub</title>
+    <style>
+        button {
+            border-radius: 4px;
+            background-color: rgba(241, 196, 136, 0.746);
+            font-size: 30px;
+            padding: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,6 +43,10 @@
         <li id="fim">melancia</li>
     </ul>
 
+    <button onclick="corAleatoria()">Mudar de Cor</button>
+    <br>
+    <br>
+
     <!--IMAGEM-->
     <img src="../assets/real.png" alt="Logo da bandeira do Brasil">
     <br> <!--Imagem do próprio arquivo-->
@@ -47,5 +60,14 @@
     <!--O elemento de figura representa algum conteúdo de fluxo, opcionalmente com uma legenda, que é independente.-->
 
 </body>
+<script>
+   function corAleatoria(){
+    const red = Math.floor(Math.random() * 255)
+    const green = Math.floor(Math.random() * 255)
+    const blue = Math.floor(Math.random() * 255)
+    
+    document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`}
+
+</script>
 
 </html>
